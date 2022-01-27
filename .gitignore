@@ -1,4 +1,21 @@
-_site/
-.sass-cache/
-.jekyll-cache/
-.jekyll-metadata
+# temporary files
+.~lock.*#
+*.*~
+
+### TeX ###
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+.*.lb
+*.synctex.gz
+*.fdb_latexmk
+*.xdv
+__latexindent_temp.tex
