@@ -1,0 +1,46 @@
+\usepackage{fullpage}
+\usepackage{fancyhdr}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fontspec}
+\usepackage{emoji}
+\usepackage{tabularx,colortbl}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{makecell}
+\usepackage{adjustbox}
+\usepackage[ddmmyyyy]{datetime}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+
+\setsansfont{Open Sauce Sans}
+\setmonofont{Fira Code}
+\renewcommand{\familydefault}{\sfdefault}
+
+\definecolor{colBack}{HTML}{0c0c0c}
+\definecolor{colFront}{HTML}{bbbbbb}
+\definecolor{colCornGreen}{HTML}{3d721e}
+\definecolor{colCornYellow}{HTML}{efc310}
+\pagecolor{colBack}
+\color{colFront}
+
+\pagestyle{fancyplain}
+\headheight 35pt
+\lhead{\cornTopic}
+\chead{
+    \texttt{Evy's}\textbf{\Huge
+        {\color{colCornYellow}CORN}{\color{colCornGreen}SHEETS}
+        \emoji{corn}
+    }
+}
+\rhead{\today{}\\\currenttime}
+\headsep 1.5em
+
+% colorbox for lemmas
+\tcbset{lemmaTitle/.style={title={Lemma {#1}}}}
+
+% for tables and such
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}m{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}} 
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}m{#1}}
+
+\setlength{\extrarowheight}{10pt}
