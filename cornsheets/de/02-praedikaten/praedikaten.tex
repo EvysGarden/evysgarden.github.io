@@ -1,0 +1,41 @@
+\documentclass{article}
+
+\newcommand\cornTopic{Prädikatenlogik} % today's topic
+\input{../cornlib/corn.tex}
+
+\begin{document}
+\large
+\section*{Quantoren für All- und Existenzaussagen}
+
+\begin{itemize}[label=\emoji{corn}]
+	\item {\Large Allaussage:}
+	      $\forall n. A(n)$
+
+	      Diese ist genau dann wahr, wenn $A(n)$ für
+	      alle Werte $n \in \mathbf{N}$ wahr ist. \\
+
+	\item {\Large Existenzaussage:}
+	      $\exists n. A(n)$
+
+	      Diese ist genau dann wahr, wenn $A(n)$ für
+	      mindestens einen Wert $n \in \mathbf{N}$ wahr ist.
+\end{itemize}
+\begin{tcolorbox}[colback=colBack,colframe=colCornGreen,coltext=colFront, lemmaTitle=2.2]
+	\begin{itemize}[label=\emoji{corn}]
+		\item $\neg (\forall x. A(x)) \equiv \exists x. \neg A(x)$
+		\item $\neg (\exists x. A(x)) \equiv \forall x. \neg A(x)$
+	\end{itemize}
+\end{tcolorbox}
+
+
+\section*{Prädikatenlogik über natürliche Zahlen}
+\begin{center}
+	\begin{tabular}{C{3cm}|C{4cm}|L{6cm}}
+		Prädikat     & Definition                                                            & Bedeutung                                             \\
+		[10pt]\midrule
+		$n|m$        & $\exists k. n \cdot k = m$                                            & $n$ teilt $m$                                         \\
+		[10pt]
+		$ggT(n,m,x)$ & $x|n \land x|m \land \forall y. (y|n \land y|m) \Rightarrow y \leq x$ & Ist $x$ der größte gemeinsame Teiler von $n$ und $m$? \\
+	\end{tabular}
+\end{center}
+\end{document}
