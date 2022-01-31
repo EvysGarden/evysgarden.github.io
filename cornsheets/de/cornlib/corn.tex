@@ -11,6 +11,7 @@
 \usepackage[ddmmyyyy]{datetime}
 \usepackage{enumitem}
 \usepackage{tcolorbox}
+\usepackage{amssymb}
 
 \setsansfont{Open Sauce Sans}
 \setmonofont{Fira Code}
@@ -36,32 +37,54 @@
 \headsep 1.5em
 
 % colorbox for lemmas
-\newtcolorbox{lemmaBox}[1]{
+\newtcolorbox{lemmaBox}[1][]{
     colback=colBack,
     colframe=colCornGreen,
     coltext=colFront,
     title=Lemma #1
 }
 
+% colorbox for definitions
+\newtcolorbox{defBox}[1][]{
+    colback=colBack,
+    colframe=colCornGreen,
+    coltext=colFront,
+    title=\textbf{Definition} #1
+}
+
+% colorbox for important sentences
+\newtcolorbox{senBox}[1][]{
+    colback=colBack,
+    colframe=colCornGreen,
+    coltext=colFront,
+    title=\textbf{Satz} #1
+}
+
 % colorbox for examples
-\newtcolorbox{exampleBox}[1]{
+\newtcolorbox{exampleBox}[1][]{
     colback=colBack,
     colframe=colCornYellow,
     coltext=colFront,
-    title=\textbf{\color{colBack}Beispiel: #1}
+    title={\color{colBack}\textbf{Beispiel} #1}
 }
 
 % colorbox for notes
-\newtcolorbox{noteBox}{
+\newtcolorbox{noteBox}[1][]{
     colback=colBack,
     colframe=gray,
     coltext=colFront,
-    title=\textbf{\color{colBack}Notiz}
+    title={\color{colBack} \textbf{Notiz} #1}
 }
 
 % for tables and such
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}m{#1}}
 \newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}} 
 \newcolumntype{R}[1]{>{\raggedleft\arraybackslash}m{#1}}
-
 \setlength{\extrarowheight}{10pt}
+
+% additional math symbols
+%% see https://tex.stackexchange.com/questions/108403/how-to-create-subset-with-sim-symbol
+\newcommand\subsetsim{\mathrel{%
+  \ooalign{\raise0.2ex\hbox{$\subset$}\cr\hidewidth\raise-0.8ex\hbox{\scalebox{0.9}{$\sim$}}\hidewidth\cr}}}
+\newcommand\sqsubsetsim{\mathrel{%
+  \ooalign{\raise0.2ex\hbox{$\sqsubset$}\cr\hidewidth\raise-0.8ex\hbox{\scalebox{0.9}{$\sim$}}\hidewidth\cr}}}
