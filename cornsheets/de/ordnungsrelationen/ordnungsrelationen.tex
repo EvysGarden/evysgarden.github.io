@@ -1,0 +1,87 @@
+\documentclass{article}
+
+\newcommand\cornTopic{Partielle Ordnung} % today's topic
+\input{../cornlib/corn.tex}
+
+\begin{document}\large
+\section*{Partielle Ordnung / Halbordnung}
+\begin{defBox}[5.1]
+	\begin{itemize}[label=\emoji{corn}]
+		\item $\sqsubseteq$ ist reflexiv: {\color{colCornYellow} $\forall a \in A. a \sqsubseteq a$}
+		\item $\sqsubseteq$ ist antisymmetrisch: {\color{colCornYellow} $\forall a_1, a_2 \in A. a_1 \sqsubseteq a_2 \land a_2 \sqsubseteq a_1 \Rightarrow a_1 = a_2$}
+		\item $\sqsubseteq$ ist transitiv: {\color{colCornYellow} $\forall a_1, a_2, a_3 \in A. a_1 \sqsubseteq a_2 \land a_2 \sqsubseteq a_3 \Rightarrow a_1 \sqsubseteq a_3$}
+	\end{itemize}
+\end{defBox}
+\begin{senBox}[5.1]
+	\begin{center}
+		$\leq$ ist eine partielle Ordnung auf $\mathbb{N}$
+	\end{center}
+\end{senBox}
+\begin{exampleBox}[Partielle Ordnung / Halbordnung]
+	\begin{itemize}[label=\emoji{corn}]
+		\item $\subseteq$ auf $\mathfrak{P}(M)$ für eine beliebige Grundmenge M.
+		\item Teilbarkeitsbeziehung $|$ auf $\mathbb{N}$.
+		\item Teilzeichenreihenbeziehung auf $A^{*}$ definiert durch:
+		\[
+			w' \sqsubseteq w \Leftrightarrow_{df} \exists w_1, w_2 \in A^{*}. w_1\ w'\ w_2 = w
+		\]
+		(Beispiel: \texttt{w' = "sdf", w = "asdfg"})
+	\end{itemize}
+\end{exampleBox}
+
+\section*{Quasiordnungen / Präordnung}
+\begin{defBox}[5.2]
+	\begin{itemize}[label=\emoji{corn}]
+		\item $\sqsubsetsim$ ist reflexiv: {\color{colCornYellow} $\forall a \in A. a \sqsubsetsim a$}
+		\item $\sqsubsetsim$ ist transitiv: {\color{colCornYellow} $\forall a_1, a_2, a_3 \in A. a_1 \sqsubsetsim a_2 \land a_2 \sqsubsetsim a_3 \Rightarrow a_1 \sqsubsetsim a_3$}
+	\end{itemize}
+\end{defBox}
+\begin{exampleBox}[Quasiordnungen / Präordnung]
+	\begin{itemize}[label=\emoji{corn}]
+		\item ``kleiner oder gleich groß''-Beziehung bei Personen.
+		\item Teilbarkeitsbeziehung $|$ auf $\mathbb{Z}$.
+	\end{itemize}
+\end{exampleBox}
+\begin{noteBox}
+	\begin{itemize}[label=\emoji{corn}]
+		\item Eine Quasiordnung $\sqsubsetsim\ \subseteq A \times A$ induziert eine Äquivalenzrelation auf $A$ durch:
+		      \[
+			      a_1 \sim a_2 \Leftrightarrow_{df} a_1 \sqsubsetsim a_2 \land a_2 \sqsubsetsim a_1
+		      \]
+		\item $a_1 = a_2 \Rightarrow a_1 \sim a_2$ (reflexiv)
+		\item $\sqsubsetsim$ bildet eine partielle Ordnung auf $A \backslash \sim$
+	\end{itemize}
+\end{noteBox}
+
+\section*{Totale Quasiordnung}
+\begin{defBox}[totale Quasiordnung / Präferenzordnung]
+	Eine Quasiordnung $\sqsubsetsim\ \subseteq A \times A$,
+	in der \textbf{alle} Elemente vergleichbar sind,
+	heißt \textit{totale Quasiordnung} oder auch \textit{Präferenzordnung}, d.h.:
+	\[
+		\forall a_1, a_2 \in A. a_1 \sqsubsetsim a_2 \lor a_2 \sqsubsetsim a_1
+	\]
+\end{defBox}
+\begin{exampleBox}[totale Quasiordnung / Präferenzordnung]
+	\begin{itemize}[label=\emoji{corn}]
+		\item Personen nach ihrer Größe geordnet.
+		\item ``Weniger mächtig''-Beziehung $\leqq$ auf Mengensystemen.
+	\end{itemize}
+\end{exampleBox}
+
+\section*{Totale Ordnung}
+\begin{defBox}[totale Ordnung / lineare Ordnung]
+	Eine partielle Ordnung $\sqsubseteq\ \subseteq A \times A$,
+	in der \textbf{alle} Elemente vergleichbar sind,
+	heißt \textit{totale Ordnung} oder auch \textit{lineare Ordnung}, d.h.:
+	\[
+		\forall a_1, a_2 \in A. a_1 \sqsubseteq a_2 \lor a_2 \sqsubseteq a_1
+	\]
+\end{defBox}
+\begin{exampleBox}[totale Ordnung / lineare Ordnung]
+	\begin{itemize}[label=\emoji{corn}]
+		\item $\leq$ auf $\mathbb{N}$.
+		\item Lexikographische Ordnung auf $A^{*}$
+	\end{itemize}
+\end{exampleBox}
+\end{document}
