@@ -1,15 +1,15 @@
 \documentclass{article}
 
-\newcommand\cornTopic{Partielle Ordnung} % today's topic
+\newcommand\cornTopic{Ordnungsrelationen} % today's topic
 \input{../cornlib/corn.tex}
 
 \begin{document}\large
 \section*{Partielle Ordnung / Halbordnung}
 \begin{defBox}[5.1]
 	\begin{itemize}[label=\emoji{corn}]
-		\item $\sqsubseteq$ ist reflexiv: {\color{colCornYellow} $\forall a \in A. a \sqsubseteq a$}
-		\item $\sqsubseteq$ ist antisymmetrisch: {\color{colCornYellow} $\forall a_1, a_2 \in A. a_1 \sqsubseteq a_2 \land a_2 \sqsubseteq a_1 \Rightarrow a_1 = a_2$}
-		\item $\sqsubseteq$ ist transitiv: {\color{colCornYellow} $\forall a_1, a_2, a_3 \in A. a_1 \sqsubseteq a_2 \land a_2 \sqsubseteq a_3 \Rightarrow a_1 \sqsubseteq a_3$}
+		\item $\sqsubseteq$ ist \textbf{reflexiv}: {\color{colCornYellow} $\forall a \in A. a \sqsubseteq a$}
+		\item $\sqsubseteq$ ist \textbf{antisymmetrisch}: {\color{colCornYellow} $\forall a_1, a_2 \in A. a_1 \sqsubseteq a_2 \land a_2 \sqsubseteq a_1 \Rightarrow a_1 = a_2$}
+		\item $\sqsubseteq$ ist \textbf{transitiv}: {\color{colCornYellow} $\forall a_1, a_2, a_3 \in A. a_1 \sqsubseteq a_2 \land a_2 \sqsubseteq a_3 \Rightarrow a_1 \sqsubseteq a_3$}
 	\end{itemize}
 \end{defBox}
 \begin{senBox}[5.1]
@@ -22,18 +22,18 @@
 		\item $\subseteq$ auf $\mathfrak{P}(M)$ für eine beliebige Grundmenge M.
 		\item Teilbarkeitsbeziehung $|$ auf $\mathbb{N}$.
 		\item Teilzeichenreihenbeziehung auf $A^{*}$ definiert durch:
-		\[
-			w' \sqsubseteq w \Leftrightarrow_{df} \exists w_1, w_2 \in A^{*}. w_1\ w'\ w_2 = w
-		\]
-		(Beispiel: \texttt{w' = "sdf", w = "asdfg"})
+		      \[
+			      w' \sqsubseteq w \Leftrightarrow_{df} \exists w_1, w_2 \in A^{*}. w_1\ w'\ w_2 = w
+		      \]
+		      (Beispiel: \texttt{w' = "sdf", w = "asdfg"})
 	\end{itemize}
 \end{exampleBox}
 
 \section*{Quasiordnungen / Präordnung}
 \begin{defBox}[5.2]
 	\begin{itemize}[label=\emoji{corn}]
-		\item $\sqsubsetsim$ ist reflexiv: {\color{colCornYellow} $\forall a \in A. a \sqsubsetsim a$}
-		\item $\sqsubsetsim$ ist transitiv: {\color{colCornYellow} $\forall a_1, a_2, a_3 \in A. a_1 \sqsubsetsim a_2 \land a_2 \sqsubsetsim a_3 \Rightarrow a_1 \sqsubsetsim a_3$}
+		\item $\sqsubsetsim$ ist \textbf{reflexiv}: {\color{colCornYellow} $\forall a \in A. a \sqsubsetsim a$}
+		\item $\sqsubsetsim$ ist \textbf{transitiv}: {\color{colCornYellow} $\forall a_1, a_2, a_3 \in A. a_1 \sqsubsetsim a_2 \land a_2 \sqsubsetsim a_3 \Rightarrow a_1 \sqsubsetsim a_3$}
 	\end{itemize}
 \end{defBox}
 \begin{exampleBox}[Quasiordnungen / Präordnung]
@@ -48,7 +48,7 @@
 		      \[
 			      a_1 \sim a_2 \Leftrightarrow_{df} a_1 \sqsubsetsim a_2 \land a_2 \sqsubsetsim a_1
 		      \]
-		\item $a_1 = a_2 \Rightarrow a_1 \sim a_2$ (reflexiv)
+		\item $a_1 = a_2 \Rightarrow a_1 \sim a_2$ (\textbf{reflexiv})
 		\item $\sqsubsetsim$ bildet eine partielle Ordnung auf $A \backslash \sim$
 	\end{itemize}
 \end{noteBox}
@@ -82,6 +82,58 @@
 	\begin{itemize}[label=\emoji{corn}]
 		\item $\leq$ auf $\mathbb{N}$.
 		\item Lexikographische Ordnung auf $A^{*}$
+	\end{itemize}
+\end{exampleBox}
+
+\section*{Striktordnungen}
+\begin{defBox}[Striktordnungen]
+	Zu einer gegebenen Quasiordnung $\sqsubsetsim$
+	lässt sich die zugehörige \textit{Striktordnung}
+	$\sqsubset$ definieren durch:
+	\[
+		a_1 \sqsubset a_2 \Leftrightarrow a_1 \sqsubsetsim a_2 \land a_1 \not \sim a_2
+	\]
+\end{defBox}
+\begin{lemmaBox}[5.1]
+	\begin{itemize}[label=\emoji{corn}]
+		\item $\sqsubset$ ist \textbf{asymmetrisch}, d.h.: {\color{colCornYellow} $\forall a_1, a_2 \in A, a_1 \sqsubset a_2 \Rightarrow a_2 \not \sqsubset a_1$}
+		\item $\sqsubset$ ist \textbf{transitiv}, d.h.: {\color{colCornYellow} $\forall a_1, a_2, a_3 \in A. a_1 \sqsubset a_2 \land a_2 \sqsubset a_3 \Rightarrow a_1 \sqsubset a_3$}
+	\end{itemize}
+\end{lemmaBox}
+Folgerung: $\sqsubset$ ist \textbf{irreflexiv}, d.h.: $\forall a \in A. a \not \sqsubset a$
+
+\section*{Partielle Ordnung aus Striktordnung}
+\begin{defBox}[Partielle Ordnung aus Striktordnung]
+	Zu einer gegebenen Striktordnung $\sqsubset$ lässt
+	sich die zugehörige partielle \\
+	Ordnung definieren durch:
+	\[
+		a_1 \sqsubseteq a_2 \Leftrightarrow_{df} a_1 \sqsubset a_2 \lor a_1 = a_2
+	\]
+\end{defBox}
+
+\section*{Nachbarschaftsordnung}
+\begin{defBox}
+	Wird eine Striktordnung auf die unmittelbar benachbarten Abhängigkeiten \\
+	reduziert, so entsteht die Nachbarschaftsordnung $\sqsubset_N$, definiert durch:
+	\[
+		a_1 \sqsubset_N a_2 \Leftrightarrow_{df} a_1 \sqsubset a_2 \land \not \exists a_3 \in A. a_1 \sqsubset a_3 \sqsubset a_2
+	\]
+\end{defBox}
+
+\section*{Noethersche Quasiordnung}
+\begin{defBox}
+	Eine Quasiordnung $(M, \sqsubseteq)$ ist genau dann Noethersch,
+	wenn es in M keine unendliche, echt absteigende Kette
+	$x_0 \sqsupset x_1 \sqsupset x_2 \dots$ gibt.
+\end{defBox}
+\begin{exampleBox}{5.3 Noethersch partielle Ordnungen}
+	\begin{itemize}[label=\emoji{corn}]
+		\item $\leq$ auf \mathbb{N} ist Noethersch,
+		      denn jede nichtleere Teilmenge enthält
+		      sogar ein kleinstes Element.
+		\item Die Teilzeichenreihenbeziehung auf $A^{*}$ ist Noethersch.
+		\item $\subseteq$ ist Noethersch auf $\mathfrak{P}(M)$ für jede endliche Grundmenge M.
 	\end{itemize}
 \end{exampleBox}
 \end{document}

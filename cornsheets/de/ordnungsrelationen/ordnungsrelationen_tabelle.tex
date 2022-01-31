@@ -1,0 +1,25 @@
+\documentclass{article}
+
+%\setlength{\voffset}{-2cm}
+
+\usepackage[a4paper, landscape]{geometry}
+
+\newcommand\cornTopic{Ordnungsrelationen} % today's topic
+\input{../cornlib/corn.tex}
+
+\begin{document}\large
+\begin{adjustbox}{center}
+	\setlength{\extrarowheight}{10pt}
+	\begin{tabular}{L{4cm}C{2cm}C{4cm}C{3cm}C{2cm}C{4cm}C{3cm}C{3cm}}
+		Ordnungsrelation                       & Reflixiv     & Antisymmetrisch & Asymmetrisch & Transitiv    & Alle Elemente sind vergleichbar & Nur unmittelbare Nachbern & Noethersch   \\
+		[10pt]\midrule
+		Partielle Ordnung / Halbordnung        & \emoji{corn} & \emoji{corn}    &              & \emoji{corn} &                                 &                           &              \\
+		Quasiordnungen / Präordnung            & \emoji{corn} &                 &              & \emoji{corn} &                                 &                           &              \\
+		Totale Quasiordnung / Präferenzordnung & \emoji{corn} &                 &              & \emoji{corn} & \emoji{corn}                    &                           &              \\
+		Totale Ordnung / Lineare Ordnung       & \emoji{corn} & \emoji{corn}    &              & \emoji{corn} & \emoji{corn}                    &                           &              \\
+		Striktordnung                          &              &                 & \emoji{corn} & \emoji{corn} &                                 &                           &              \\
+		Nachbarschafts-ordnung                 &              &                 & \emoji{corn} & \emoji{corn} &                                 & \emoji{corn}              &              \\
+		Noethersche Quasiordnung               & \emoji{corn} &                 &              & \emoji{corn} &                                 &                           & \emoji{corn} \\
+	\end{tabular}
+\end{adjustbox}
+\end{document}
