@@ -1,0 +1,19 @@
+{
+  "name": "evysgarden.github.io",
+  "version": "1.0.0",
+  "description": "Evy's public pages",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/EvysGarden/evysgarden.github.io.git"
+  },
+  "author": "Evy Garden",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EvysGarden/evysgarden.github.io/issues"
+  },
+  "homepage": "https://github.com/EvysGarden/evysgarden.github.io#readme"
+}
