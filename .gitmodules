@@ -1,0 +1,3 @@
+[submodule "waydn"]
+	path = waydn
+	url = https://github.com/EvysGarden/waydn.git
