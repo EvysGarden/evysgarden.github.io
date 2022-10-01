@@ -168,6 +168,10 @@ hr {
     color: var(--pew-foreground);
 }
 
+a:hover>.pew-grid>div {
+    text-decoration: underline 2px;
+}
+
 a {
     color: var(--foreground);
     text-decoration: none;
