@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Fira Code';
-    src: url('FiraCode-Regular-Nerd.ttf') format('truetype');
+    src: url('FiraCode-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -8,15 +8,23 @@
 
 @font-face {
     font-family: 'Fira Code';
-    src: url('FiraCode-Bold-Nerd.ttf') format('truetype');
+    src: url('FiraCode-Bold.ttf') format('truetype');
     font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nerd Fonts Symbols';
+    src: url('NerdFontsSymbolsMono-Regular.ttf') format('truetype');
+    font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 :root {
     color-scheme: light dark;
-    font-family: 'Fira Code';
+    font-family: 'Fira Code', 'Nerd Fonts Symbols';
     --title-weight: bold;
     --title-size: 3em;
     --header-weight: bold;
